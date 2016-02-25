@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   resources :meals do
+    patch 'add_food'
     resources :foods do
       collection do
         get 'search'

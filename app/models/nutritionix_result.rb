@@ -7,6 +7,7 @@ class NutritionixResult
   end
 
   def self.from_json(json)
+    return [] unless json['hits']
     results = []
     json['hits'].each do |food|
       new_name = food['fields']['item_name']
